@@ -1,5 +1,5 @@
 /**
- * Gera `assets/logo.ico` (transparente, vários tamanhos) a partir de `assets/logo.jpg`.
+ * Gera `assets/icon.ico` (transparente, vários tamanhos) a partir de `assets/logo.jpg`.
  * Usado pelo atalho do Windows e pela janela do app.
  *
  * Uso: npm run build:icon
@@ -13,7 +13,7 @@ import { NodeProcessRunner } from '../src/main/infrastructure/process/ProcessRun
 import { removeWhite } from './icon/removeWhite';
 
 const SOURCE = resolve('assets/logo.jpg');
-const OUTPUT = resolve('assets/logo.ico');
+const OUTPUT = resolve('assets/icon.ico');
 const SIZES = [256, 128, 64, 48, 32, 16];
 
 async function main(): Promise<void> {

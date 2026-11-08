@@ -2,7 +2,7 @@ import { join } from 'node:path';
 import { BrowserWindow, shell } from 'electron';
 
 /** Ícone da janela e da barra de tarefas (gerado por `npm run build:icon`). */
-const APP_ICON_PATH = join(__dirname, '../../assets/logo.ico');
+const APP_ICON_PATH = join(__dirname, '../../assets/icon.ico');
 
 export function createMainWindow(): BrowserWindow {
   const window = new BrowserWindow({
