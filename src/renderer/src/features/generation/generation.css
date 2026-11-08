@@ -1,0 +1,139 @@
+.generation {
+  display: grid;
+  grid-template-columns: 380px minmax(0, 1fr);
+  gap: var(--gutter);
+  padding: var(--gutter);
+  align-items: start;
+}
+
+.generation__sidebar,
+.generation__content {
+  display: grid;
+  gap: var(--gutter);
+}
+
+.stack {
+  display: grid;
+  gap: 18px;
+}
+
+.muted {
+  color: var(--muted);
+  font-size: 12px;
+  word-break: break-all;
+}
+
+.error {
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: rgba(248, 113, 113, 0.12);
+  color: var(--danger);
+}
+
+/* Seletor de vídeo */
+.picker {
+  display: grid;
+  justify-items: center;
+  gap: 10px;
+  padding: 28px 16px;
+  border: 2px dashed var(--border);
+  border-radius: var(--radius);
+  text-align: center;
+  transition:
+    border-color 0.15s,
+    background 0.15s;
+}
+
+.picker--active {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.picker__prompt {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.picker__hint {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.picker__name {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+/* Resumo e tabela */
+.summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 12px;
+  margin: 0;
+}
+
+.summary__item {
+  padding: 12px;
+  border-radius: 10px;
+  background: var(--surface-2);
+}
+
+.summary__item dt {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.summary__item dd {
+  margin: 2px 0 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.table-wrap {
+  max-height: 46vh;
+  overflow: auto;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.table th {
+  position: sticky;
+  top: 0;
+  background: var(--surface-2);
+  text-align: left;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.table th,
+.table td {
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+.table tbody tr:hover {
+  background: var(--surface-2);
+}
+
+.table .num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.preview-banner {
+  padding: 6px var(--gutter);
+  background: rgba(251, 191, 36, 0.12);
+  color: var(--warning);
+  font-size: 12px;
+  text-align: center;
+}
