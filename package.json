@@ -1,0 +1,45 @@
+{
+  "name": "bulk-video-editor",
+  "version": "0.1.0",
+  "description": "Gera variações de um vídeo com diferença controlada, localmente.",
+  "private": true,
+  "main": "./out/main/index.js",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "zod": "^4.6.7",
+    "zustand": "^5.1.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.2.1",
+    "electron": "^45.2.3",
+    "electron-vite": "^6.0.0",
+    "eslint": "^10.14.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "globals": "^17.14.0",
+    "prettier": "^3.9.10",
+    "tsx": "^4.23.15",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.72.1",
+    "vite": "^8.3.6",
+    "vitest": "^5.1.0"
+  },
+  "scripts": {
+    "dev": "electron-vite dev",
+    "build": "npm run typecheck && electron-vite build",
+    "start": "electron-vite preview",
+    "typecheck": "tsc -p tsconfig.node.json && tsc -p tsconfig.web.json",
+    "test": "vitest run",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "check": "npm run typecheck && npm run lint && npm run test",
+    "report:diversity": "tsx --tsconfig tsconfig.node.json scripts/diversityReport.ts",
+    "generate": "tsx --tsconfig tsconfig.node.json scripts/generate.ts",
+    "build:icon": "tsx --tsconfig tsconfig.node.json scripts/buildIcon.ts"
+  }
+}
